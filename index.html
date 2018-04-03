@@ -142,7 +142,7 @@ from pipeline_mako import render_require_js_path_overrides
     % endif -->
 <!--*****************************  header starts here -->
 <header>
-	<nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -158,9 +158,9 @@ from pipeline_mako import render_require_js_path_overrides
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="#">partners</a></li>
+        <li><a href="#">contact</a></li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
@@ -168,24 +168,144 @@ from pipeline_mako import render_require_js_path_overrides
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" class="btn btn-default">Link</a></li>
-        <li><a href="#" class="btn btn-default">Link</a></li>
-      </ul>
+      <div class="pull-right btn-custom">
+        <a href="#" class="btn btn-default">Link</a>
+        <a href="#" class="btn btn-secondary">Link</a>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="container">
-	<ul class="nav navbar-nav navbar-secondary">
-		<li><a href="#">links</a></li>
-		<li><a href="#">links</a></li>
-		<li><a href="#">links</a></li>
-	</ul>
+<div class="navbar-secondary">
+  <div class="container">
+    <ul class="nav navbar-nav ">
+      <li><a href="#">home</a></li>
+      <li><a href="#">courses</a></li>
+      <li><a href="#">lectures</a></li>
+      <li><a href="#">topics</a></li>
+    </ul>
+  </div>
 </div>
 </header>
 <!-- ++++++++++++++++ ends here +++++++++++++++-->
     <div class="content-wrapper" id="content">
+<section class="learn-from-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Why learn from us?</h2>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-text">
+            <img src="images/icon.png" alt="">
+            <p>High quality certified courses by Ivy league Universities & International Medical Associations</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+          <div class="icon-text">
+              <img src="images/icon.png" alt="">
+              <p>High quality certified courses by Ivy league Universities & International Medical Associations</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="icon-text">
+                <img src="images/icon.png" alt="">
+                <p>High quality certified courses by Ivy league Universities & International Medical Associations</p>
+            </div>
+          </div>
+    </div>
+  </div>
+</section>
+<section class="upcoming-courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Upcoming Courses</h3>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/card.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <h4>Focusing on Challenging fields in Dermatology</h4>
+            <span>By Dermallive</span>
+            <a href="#" class="btn btn-primary"></a>
+            <p>Starts May 26, 2018</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card">
+            <div class="card-img">
+              <img src="images/card.jpg" alt="">
+            </div>
+            <div class="card-text">
+              <h4>Focusing on Challenging fields in Dermatology</h4>
+              <span>By Dermallive</span>
+              <a href="#" class="btn btn-primary"></a>
+              <p>Starts May 26, 2018</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/card.jpg" alt="">
+              </div>
+              <div class="card-text">
+                <h4>Focusing on Challenging fields in Dermatology</h4>
+                <span>By Dermallive</span>
+                <a href="#" class="btn btn-primary"></a>
+                <p>Starts May 26, 2018</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+              <div class="card">
+                <div class="card-img">
+                  <img src="images/card.jpg" alt="">
+                </div>
+                <div class="card-text">
+                  <h4>Focusing on Challenging fields in Dermatology</h4>
+                  <span>By Dermallive</span>
+                  <a href="#" class="btn btn-primary"></a>
+                  <p>Starts May 26, 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <a href="" class="view-all link">view all courses</a>
+            </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Explore by topics</h3>
+      </div>
+      <div class="col-xs-12">
 
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>What our learners are saying</h3>
+        </div>
+        <div class="col-md-4">
+          <div class="learner-card">
+            <p>First time in India. We can now hear and learn from experts from our home.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     <!--   ${self.body()}
       <%block name="bodyextra"/> -->
     </div>
@@ -194,40 +314,50 @@ from pipeline_mako import render_require_js_path_overrides
         <%include file="themable-footer.html" />
     % endif -->
     <footer id="footer" class="midnight-blue">
-        <div class="containers">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="col-md-12">
-                      <img src="${static.url("images/logo.png")}" alt=""/>
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6">
+                    <div class="logo-footer">
+                        <img src="images/198x61logo.jpg" alt=""/>
                     </div>
-                    <div class="col-md-12">
-                      &copy; 2016 <a target="_blank" href="#" title="">edx-bootstrap-theme</a>. All Rights Reserved.
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="col-md-12">
-                      <ul class="pull-right">
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">About Us</a></li>
-                          <li><a href="#">Faq</a></li>
-                          <li><a href="#">Contact Us</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="social">
-                        <ul class="social-share">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        <div class="complies-text">
+                          <p>This site complies with the HONcode standard for trustworthy health information. Verify here.</p>
+                        </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <div class="col-md-12">
+                        <ul class="pull-right nav-footer">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">PRIVACY POLICY</a></li>
+                            <li><a href="#">TERMS OF USE</a></li>
+                            <li><a href="#">CONTACT US</a></li>
                         </ul>
                       </div>
-                    </div>
-                </div>
-            </div>
+                      <div class="col-md-12">
+                        <div class="social">
+                          <p>Connect with us on</p>
+                          <ul class="social-share">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row"><div class="col-xs-12">
+                <p>&copy; 2018. Docmode Inc. All rights reseverved</p>
+            </div></div>
+          </div>
+          
         </div>
     </footer>
+
 <!-- % if not disable_window_wrap:
   </div>
 % endif -->
