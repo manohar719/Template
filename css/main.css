@@ -67,6 +67,9 @@ hr {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #fff;
 }
+.btn-custom .btn:first-child{
+margin-left:0;
+}
 .btn{
   text-transform: uppercase;
   padding: 6px 16px;
@@ -74,10 +77,11 @@ hr {
   font-weight: bold;
   line-height: 1.43;
   letter-spacing: 0.4px;
-  margin-left: 10px;
   border-radius:0;
   border:none;
   margin:10px 0;
+      margin-left: 15px;
+        padding: 8px 16px;
 }
 
 .btn-default{
@@ -86,9 +90,10 @@ hr {
   color:#b6348e;
 }
 .btn-primary {
-  padding: 8px 16px;
-  background-color: #07b256;
-  color: #fff;
+
+background-color: #07b256;
+    color: #fff;
+    border: 1px solid #07b256;
 }
 
 
@@ -146,9 +151,9 @@ a:focus {
   margin-left: 20px;
 }
 
-body > section {
+/*body > section {
   padding: 70px 0;
-}
+}*/
 
 .center {
   text-align: center;
@@ -338,6 +343,41 @@ input.search-form:hover {
 .navbar-secondary .navbar-nav{
 padding-left: 0;
 }
+.search-text{
+      border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    width: 215px;
+padding: 7px 10px 3px 30px;
+    color: #606062;
+    font-size: 16px;
+}
+.search-text:focus{
+  outline:none;
+}
+.search-block{
+  position:relative;
+  margin:10px 0;
+}
+.search-btn{
+    position: absolute;
+    background-image: url(../images/magnifying-glass.png);
+    left: 0;
+    top: 6px;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    outline: 0;
+    border: 0;
+        background-size: 80%;
+}
+.nav-footer{
+  float:  right; 
+}
+.js-courses-slider.owl-carousel{
+  display:block;
+}
 /*************************
 *******Home Page******
 **************************/
@@ -356,6 +396,51 @@ h3{
   text-align: left;
   font-weight: 600;
   margin-bottom: 10px;
+}
+.banner-wrapper{
+position:relative ;
+}
+.banner-img img{
+      max-width: 100%;
+    width: 100%;
+}
+.banner-text{
+      position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+.banner-text h1{
+color:#30529a;
+font-size: 36px;
+text-align: left;
+}
+.banner-text p{
+
+  color:  #b6348e;
+font-size:16px;
+}
+.banner-text h1{
+  
+}
+.banner-detail{
+padding-top:  15%;
+
+}
+.partner-wrapper{
+  padding:25px 0;
+box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+.partner-list{
+      margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.partner-list li{
+  display: inline-block;
+    float: left;
+    text-align:   center;
 }
 .learn-from-us{
   padding: 40px 0;
@@ -404,7 +489,8 @@ max-width: 100%;
   min-height: 160px;
 }
 .card-img img {
-  max-width: 100%;
+    max-width: 100%;
+    width: 100%;
 }
 .card .card-text{
   padding: 16px 16px 35px 16px;
@@ -437,6 +523,7 @@ font-family: Lato;
   font-stretch: normal;
   line-height: 1.43;
   text-transform: capitalize;
+      margin-left: 0;
 }
 .card-text p{
   display: inline-block;
@@ -461,10 +548,16 @@ font-family: Lato;
   }
   .link-arrow::after{
     position: absolute;
-
+background-image:  url('../images/right-arrow.png');
+background-repeat:no-repeat;  
+width:25px;
+height:20px;
+    content: '';
+    right: 6px;
+    top: 3px;
   }
   .topic-wrapper{
-    padding: 10px 0 30px;
+    padding-bottom:30px;
   }
   .topic-card{
     padding: 0;
@@ -2750,10 +2843,10 @@ header.global .primary > a:hover, header.global .primary > a:focus, header.globa
 header.global .primary > a{
   box-shadow: none;
 }
-.row {
+/*.row {
     margin-right: 0px;
     margin-left: 0px;
-}
+}*/
 
 /* #content section .container{
   width: 100%;
