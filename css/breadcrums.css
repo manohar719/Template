@@ -1,0 +1,10 @@
+.breadcrums {
+	padding-left: 15px;
+}
+.breadcrums li{
+display: inline-block;
+}
+
+.breadcrums li .active{
+color: #606062;
+}

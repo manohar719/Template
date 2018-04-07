@@ -1,0 +1,74 @@
+h1{
+	    color: #30529a;
+    font-size: 36px;
+    text-align: left;
+}
+
+.comman h2{
+ color: #30529a;
+font-size: 28px;
+font-family: 'Lato';
+margin-top: 0;
+text-align: left;
+font-weight: 600;
+}
+.comman p{
+ color: #606062;
+font-size: 16px;
+font-family: 'Lato';
+opacity:0.8;
+}
+
+.comman a{
+
+	background:#07b256;
+	color: #fff;
+	display: inline-block;
+	    padding: 7px 11px;
+    text-transform: uppercase;
+}
+
+.comman span{
+
+	color: #606062;
+	display: inline-block;
+	font-size: 14px;
+}
+.partnerlist .learner-card{
+border: 0;
+}
+.partnerlist .card{
+
+	border-radius: 0;
+}
+
+.partnerlist .card .card-text{
+min-height: 0;
+border-top: 1px solid #b6348e;
+}
+.partnerlist .card .card-text span{
+color: #b6348e;
+}
+.partnerlistBlock{
+	width: 25%;
+	padding: 0px 10px;
+	float: left;
+
+}
+
+.partnerlist .comman p{
+    padding-top: 10px;
+        padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 991px){
+.partnerlistBlock{
+width: 50%;	
+}
+}
+
+@media only screen and (max-width: 480px){
+.partnerlist .rediofield{
+    display: block;
+}
+}
