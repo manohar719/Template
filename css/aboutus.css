@@ -1,0 +1,71 @@
+.profileSec .card .card-text{
+	min-height: auto;
+	padding: 16px 16px 21px 16px;
+}
+.profileSec .card-text p{
+	display: block;
+	position: relative;
+    left: 0;
+    margin-bottom: 0;
+}
+
+.profileSec .card-text span{
+	position: relative;
+	color: #333333;
+
+}
+
+.aboutcat{
+	background: #fafafb;
+	padding-left: 0;
+}
+
+.aboutcat li{
+list-style:none;
+position: relative;
+}
+.aboutcat li:after{
+	width: 5px;
+	height: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background:#30529a;
+	content: "";
+	transition: all ease 0.5s;
+}
+.aboutcat li:hover:after{
+	height: 50px;
+}
+.aboutcat li a{
+color: #b6348e;
+font-size: 14px;
+transition: all ease 0.5s;
+text-transform: uppercase;
+font-weight: bold;
+display: inline-block;
+    padding: 15px 18px 15px 30px;
+}
+
+.aboutcat li a:hover{
+color: #30529a;
+}
+.photoSec{
+	    float: left;
+    margin-right: 22px;
+}
+.photoSec h3{
+	color: #606062;
+	font-size: 16px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.photoSec span{
+	display: block;
+}
+.modal-header{
+	border: 0;
+}
+.modal-header .close{
+	margin-top: 0px;
+}
