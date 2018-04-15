@@ -50,6 +50,19 @@ display: inline-block;
 .aboutcat li a:hover{
 color: #30529a;
 }
+.aboutcat .active a{
+	color: #30529a;
+	position: relative;
+}
+.aboutcat .active:after{
+	width: 5px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background:#30529a;
+	content: "";
+}
 .photoSec{
 	    float: left;
     margin-right: 22px;
@@ -68,4 +81,35 @@ color: #30529a;
 }
 .modal-header .close{
 	margin-top: 0px;
+}
+.our-vision{
+	    width: 35%;
+    float: left;
+    padding-right: 20px;
+}
+
+.our-vision h2{
+	text-align: left;
+	font-size: 21px;
+	color: #606062;
+	 font-weight: 600; 
+  font-family: 'Lato', sans-serif;
+}
+.our-vision p{
+	font-size: 16px;
+	color: #606062;
+	text-align: left;
+	 font-family: 'Lato', sans-serif;
+}
+
+.our-vision img{
+	width: 100%;
+}
+.our-vision h3{
+	color: #b6348e;
+	font-size: 14px;
+}
+
+.our-vision .introtext{
+	height: 97px;
 }
