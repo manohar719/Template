@@ -23,13 +23,15 @@ from pipeline_mako import render_require_js_path_overrides
 %> -->
 <!DOCTYPE html>
 <!--[if lte IE 9]><html class="ie ie9 lte9" lang="${LANGUAGE_CODE}"><![endif]-->
-<!--[if !IE]><!--><html lang="${LANGUAGE_CODE}"><!--<![endif]-->
+<!--[if !IE]><!-->
+<html lang="${LANGUAGE_CODE}">
+<!--<![endif]-->
+
 <head dir="${static.dir_rtl()}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- ## Define a couple of helper functions to make life easier when
+    <!-- ## Define a couple of helper functions to make life easier when
 ## embedding theme conditionals into templates. All inheriting
 ## templates have access to these functions, and we can import these
 ## into non-inheriting templates via the %namespace tag.
@@ -41,8 +43,8 @@ from pipeline_mako import render_require_js_path_overrides
        ${static.get_page_title_breadcrumbs(self.pagetitle())}
       </title>
   </%block> -->
-<title>docmode</title>
-<!--   % if not allow_iframing:
+    <title>docmode</title>
+    <!--   % if not allow_iframing:
       <script type="text/javascript">
         /* immediately break out of an iframe if coming from the marketing website */
         (function(window) {
@@ -63,8 +65,7 @@ from pipeline_mako import render_require_js_path_overrides
 
   <%static:css group='style-vendor'/>
   <%static:css group='${self.attr.main_css}'/> -->
-
-<!--   % if not uses_pattern_library:
+    <!--   % if not uses_pattern_library:
     % if disable_courseware_js:
       <%static:js group='base_vendor'/>
       <%static:js group='base_application'/>
@@ -78,8 +79,7 @@ from pipeline_mako import render_require_js_path_overrides
     <%static:js group='base_vendor'/>
     <%static:js group='base_application'/>
   % endif -->
-
-<!--   <script>
+    <!--   <script>
     window.baseUrl = "${settings.STATIC_URL}";
     (function (require) {
       require.config({
@@ -87,8 +87,8 @@ from pipeline_mako import render_require_js_path_overrides
       });
     }).call(this, require || RequireJS.require);
   </script> -->
-<!--   <script type="text/javascript" src="${static.url("lms/js/require-config.js")}"></script> -->
-<!--   <%block name="js_overrides">
+    <!--   <script type="text/javascript" src="${static.url("lms/js/require-config.js")}"></script> -->
+    <!--   <%block name="js_overrides">
     ${render_require_js_path_overrides(settings.REQUIRE_JS_PATH_OVERRIDES)}
   </%block>
 
@@ -102,11 +102,9 @@ from pipeline_mako import render_require_js_path_overrides
 
   <%include file="widgets/optimizely.html" />
   <%include file="widgets/segment-io.html" /> -->
-
-  <meta name="path_prefix" content="${EDX_ROOT_URL}">
-  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
-
-<!-- <% ga_acct = static.get_value("GOOGLE_ANALYTICS_ACCOUNT", settings.GOOGLE_ANALYTICS_ACCOUNT) %>
+    <meta name="path_prefix" content="${EDX_ROOT_URL}">
+    <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+    <!-- <% ga_acct = static.get_value("GOOGLE_ANALYTICS_ACCOUNT", settings.GOOGLE_ANALYTICS_ACCOUNT) %>
 % if ga_acct:
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -120,30 +118,27 @@ from pipeline_mako import render_require_js_path_overrides
     })();
     </script>
 % endif -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
-  <link href="css/prettyPhoto.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/aboutus.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/aboutus.css" rel="stylesheet">
     <link href="css/breadcrums.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-
+    <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
-
-<!-- <%static:optional_include_mako file="body-initial.html" is_theming_enabled="True" />
+    <!-- <%static:optional_include_mako file="body-initial.html" is_theming_enabled="True" />
 <div id="page-prompt"></div>
 % if not disable_window_wrap:
   <div class="window-wrap" dir="${static.dir_rtl()}">
 % endif -->
-<!--     <a class="nav-skip" href="#main">${_("Skip to main content")}</a> -->
-
+    <!--     <a class="nav-skip" href="#main">${_("Skip to main content")}</a> -->
     <!-- % if not disable_header:
         <%include file="${static.get_template_path('header.html')}" args="online_help_token=online_help_token" />
     % endif -->
-<!--*****************************  header starts here -->
-<header>
+    <!--*****************************  header starts here -->
+    <header>
         <nav class="navbar navbar-default">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -205,179 +200,236 @@ from pipeline_mako import render_require_js_path_overrides
             </div>
         </div>
     </header>
-<!-- ++++++++++++++++ ends here +++++++++++++++-->
+    <!-- ++++++++++++++++ ends here +++++++++++++++-->
     <div class="content-wrapper" id="content">
-<section >
-  <div class="container topicCont">
-  <div class="row">
-  <ul class=breadcrums>
-  <li><a href="#">Home / </a></li>
-  <li ><a href="#" >About us / </a></li>
-  <li ><a href="#" class="active" >Team</a></li>
-  </ul>
-  </div>
-   <div class="row">
-  <div class="col-md-3">
-  <ul class="aboutcat">
-  <li class="active"> <a href="#">About</a></li>
-  <li> <a href="#">Our Story</a></li>
-  <li> <a href="#">Our Team</a></li>
-  <li> <a href="#">Advisory Board</a></li>
-    <li> <a href="#">Logo and Slogan</a></li>
-  </ul>
-  </div>
-
-  <div class="col-md-9">
-  <div class="profileSec">
-
-  <p>
-  DocMode is a platform that provides authoritative, comprehensive and interactive learning programs for Health Professionals - Doctors, Nurses, Allied and Medical Students - across the world. This Medical content is created, reviewed and presented by Leading Medical Schools/Universities, Medical Associations and  Subject Matter Experts/Key Opinion leaders who are focussed to effectively transfer knowledge, as well as communicate and network with each other through our Continuing Medical Education (CME) programs and Online Courses.
-  </p>
-
-  <div class="our-vision">
-    <h2>Our Vision</h2>
-    <div class="introtext">
-    <p>To become an integral part of the Healthcare Professional’s daily routine with essential resources for their Learning and Practice</p></div>
-    <img src="images/vision.jpg">
-    <h3>FOR PROFESSIONALS</h3>
-    <p>Authoritative, comprehensive and interactive learning programs</p>
-
-    <p>Content reviewed and presented by Key Opinion leaders</p>
-    <p>More than 600 CMEs conducted</p>
-
-  </div>
-
-
-  <div class="our-vision">
-    <h2>Our Mission</h2>
-    <div class="introtext">
-    <p>To create a value-based Online Learning experience for Health professionals globally.</p>
-    </div>
-    
-    <img src="images/mission.jpg">
-    <h3>FOR ORGANISATIONS</h3>
-    <p>Reach out and engage with Doctors -  from generalpractitioners to Consultants and to super specialists</p>
-
-    <p>Offer comprehensive training programs through our complete online learning technology</p>
-    <p>Increase research base and capabilities in emerging marketss</p>
-
-  </div>
-
-
-  </div>
-
-  </div>
-
-   </div>
-  </div>
-</section>
-
-    <!--   ${self.body()}
+        <section>
+            <div class="container topicCont">
+                <div class="row">
+                    <ul class=breadcrums>
+                        <li><a href="#">Home / </a></li>
+                        <li><a href="#">About us / </a></li>
+                        <li><a href="#" class="active">Team</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="aboutcat js-about-tabs">
+                            <li class="active"> <a href="#">About</a></li>
+                            <li> <a href="#">Our Story</a></li>
+                            <li> <a href="#">Our Team</a></li>
+                            <li> <a href="#">Advisory Board</a></li>
+                            <li> <a href="#">Logo and Slogan</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                    <div class="content-wrapper">
+                      <div class="content-item active">
+                         <div class="profileSec">
+                            <p>
+                                DocMode is a platform that provides authoritative, comprehensive and interactive learning programs for Health Professionals - Doctors, Nurses, Allied and Medical Students - across the world. This Medical content is created, reviewed and presented by Leading Medical Schools/Universities, Medical Associations and Subject Matter Experts/Key Opinion leaders who are focussed to effectively transfer knowledge, as well as communicate and network with each other through our Continuing Medical Education (CME) programs and Online Courses.
+                            </p>
+                            <div class="our-vision">
+                                <h2>Our Vision</h2>
+                                <div class="introtext">
+                                    <p>To become an integral part of the Healthcare Professional’s daily routine with essential resources for their Learning and Practice</p>
+                                </div>
+                                <img src="images/vision.jpg">
+                                <h3>FOR PROFESSIONALS</h3>
+                                <p>Authoritative, comprehensive and interactive learning programs</p>
+                                <p>Content reviewed and presented by Key Opinion leaders</p>
+                                <p>More than 600 CMEs conducted</p>
+                            </div>
+                            <div class="our-vision">
+                                <h2>Our Mission</h2>
+                                <div class="introtext">
+                                    <p>To create a value-based Online Learning experience for Health professionals globally.</p>
+                                </div>
+                                <img src="images/mission.jpg">
+                                <h3>FOR ORGANISATIONS</h3>
+                                <p>Reach out and engage with Doctors - from generalpractitioners to Consultants and to super specialists</p>
+                                <p>Offer comprehensive training programs through our complete online learning technology</p>
+                                <p>Increase research base and capabilities in emerging marketss</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="content-item">
+                        <div class="profileSec">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <a href="#" data-toggle="modal" data-target="#profile1"><img src="images/profile1.jpg"  alt=""></a></div>
+                                    <div class="card-text">
+                                        <p>Starts May 26, 2018</p>
+                                        <span> Founder & CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="images/profile1.jpg" alt=""></div>
+                                    <div class="card-text">
+                                        <p>Starts May 26, 2018</p>
+                                        <span> Founder & CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="images/profile1.jpg" alt=""></div>
+                                    <div class="card-text">
+                                        <p>Starts May 26, 2018</p>
+                                        <span> Founder & CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="images/profile1.jpg" alt=""></div>
+                                    <div class="card-text">
+                                        <p>Starts May 26, 2018</p>
+                                        <span> Founder & CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="images/profile1.jpg" alt=""></div>
+                                    <div class="card-text">
+                                        <p>Starts May 26, 2018</p>
+                                        <span> Founder & CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="images/profile1.jpg" alt=""></div>
+                                    <div class="card-text">
+                                        <p>Starts May 26, 2018</p>
+                                        <span> Founder & CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="images/profile1.jpg" alt=""></div>
+                                    <div class="card-text">
+                                        <p>Starts May 26, 2018</p>
+                                        <span> Founder & CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--   ${self.body()}
       <%block name="bodyextra"/> -->
     </div>
-
-   <!--  % if not disable_footer:
+    <!--  % if not disable_footer:
         <%include file="themable-footer.html" />
     % endif -->
     <footer id="footer" class="midnight-blue">
-      <div class="footer-top">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-6">
-                    <div class="logo-footer">
-                        <img src="images/198x61logo.jpg" alt=""/>
-                    </div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo-footer">
+                            <img src="images/198x61logo.jpg" alt="" />
+                        </div>
                         <div class="complies-text">
-                          <p>This site complies with the HONcode standard for trustworthy health information. Verify here.</p>
+                            <p>This site complies with the HONcode standard for trustworthy health information. Verify here.</p>
                         </div>
-                  </div>
-                  <div class="col-sm-6">
-                      <div class="col-md-12">
-                        <ul class="pull-right nav-footer">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">PRIVACY POLICY</a></li>
-                            <li><a href="#">TERMS OF USE</a></li>
-                            <li><a href="#">CONTACT US</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="social">
-                          <p>Connect with us on</p>
-                          <ul class="social-share">
-                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                          </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-md-12">
+                            <ul class="pull-right nav-footer">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">PRIVACY POLICY</a></li>
+                                <li><a href="#">TERMS OF USE</a></li>
+                                <li><a href="#">CONTACT US</a></li>
+                            </ul>
                         </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+                        <div class="col-md-12">
+                            <div class="social">
+                                <p>Connect with us on</p>
+                                <ul class="social-share">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer-bottom">
-          <div class="container">
-            <div class="row"><div class="col-xs-12">
-                <p>&copy; 2018. Docmode Inc. All rights reseverved</p>
-            </div></div>
-          </div>
-          
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>&copy; 2018. Docmode Inc. All rights reseverved</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-<div class="modal fade" id="profile1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <div class="photoSec">
-       <img src="images/popup-profilepic.jpg" alt=""/>
-       <h3>Hans Lewis</h3>
-       <span>Founder & CEO</span>
-       <a href="#"><img src="images/linkdin.png" alt=""/></a>
-       <a href="#"><img src="images/mail.png" alt=""/></a>
-       </div>
-       <div class="profileCont">
-       <p>
-       Hans Lewis has a distinguished career working at the intersection of healthcare and technology for more than 13 years. He looks after the Partnership and Strategy for DocMode. 
-
-Prior to the Creation of DocMode.org in 2009, Hans worked in the field of Healthcare Advertising as a Copywriter and followed up as a Sponsorship Head in Medical Events. In the initial years of DocMode, he was the Freelance contributing editor for TMCnet covering articles predominantly in Healthcare IT. 
-
-He is a Tech autodidact and is also the  project Head of the award-winning and patented clinical nutrition management app www.iNutrimon.com
-Graduated in Advertising, he has a Masters in Philosophy from Mumbai University.  Yoga and Logic is his interest areas
-       </p>
-       </div>
-      </div>
-
-      </div>
+    <div class="modal fade" id="profile1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="photoSec">
+                        <img src="images/popup-profilepic.jpg" alt="" />
+                        <h3>Hans Lewis</h3>
+                        <span>Founder & CEO</span>
+                        <a href="#"><img src="images/linkdin.png" alt=""/></a>
+                        <a href="#"><img src="images/mail.png" alt=""/></a>
+                    </div>
+                    <div class="profileCont">
+                        <p>
+                            Hans Lewis has a distinguished career working at the intersection of healthcare and technology for more than 13 years. He looks after the Partnership and Strategy for DocMode. Prior to the Creation of DocMode.org in 2009, Hans worked in the field of Healthcare Advertising as a Copywriter and followed up as a Sponsorship Head in Medical Events. In the initial years of DocMode, he was the Freelance contributing editor for TMCnet covering articles predominantly in Healthcare IT. He is a Tech autodidact and is also the project Head of the award-winning and patented clinical nutrition management app www.iNutrimon.com Graduated in Advertising, he has a Masters in Philosophy from Mumbai University. Yoga and Logic is his interest areas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- % if not disable_window_wrap:
+    </div>
+    <!-- % if not disable_window_wrap:
   </div>
 % endif -->
-
-<!--   <%block name="js_extra"/>
+    <!--   <%block name="js_extra"/>
 
   <%include file="widgets/segment-io-footer.html" /> -->
-<!--   <script type="text/javascript" src="js/vendor/noreferrer.js" charset="utf-8"></script>
+    <!--   <script type="text/javascript" src="js/vendor/noreferrer.js" charset="utf-8"></script>
   <script type="text/javascript" src="js/utils/navigation.js" charset="utf-8"></script> -->
-<!--   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" /> -->
-<script src="js/jquery.js" charset="utf-8" type="text/javascript"></script>
-  <script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
-  <script src="js/jquery.prettyPhoto.js" charset="utf-8" type="text/javascript"></script>
-  <script src="js/jquery.isotope.min.js" charset="utf-8" type="text/javascript"></script>
-  <script src="js/main.js" charset="utf-8" type="text/javascript"></script>
-  <script src="js/wow.min.js" charset="utf-8" type="text/javascript"></script>
+    <!--   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" /> -->
+    <script src="js/jquery.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jquery.prettyPhoto.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jquery.isotope.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/main.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/wow.min.js" charset="utf-8" type="text/javascript"></script>
 </body>
-</html>
 
+</html>
 <!-- <%def name="login_query()">${
   u"?next={0}".format(urlquote_plus(login_redirect_url)) if login_redirect_url else ""
 }</%def> -->
-
 <!-- Performance beacon for onload times -->
 <!-- % if settings.FEATURES.get('ENABLE_ONLOAD_BEACON', False):
 <script>

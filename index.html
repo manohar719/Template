@@ -143,7 +143,7 @@ from pipeline_mako import render_require_js_path_overrides
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Menu</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -175,6 +175,24 @@ from pipeline_mako import render_require_js_path_overrides
                         <a href="#" class="btn btn-default">sign up</a>
                         <a href="#" class="btn btn-secondary">Log in</a>
                     </div>
+                </div>
+                <div class="mob-menu">
+                    <a href="" class="close-mob-menu">x</a>
+                    <div class="mob-search search-block">
+                        <input type="text" class="search-text" placeholder="Search for courses or topics">
+                            <button type="submit" class="search-btn"></button>
+                    </div>
+                    <div class="mob-menu-btns clearfix btn-custom">
+                        <a href="#" class="btn btn-primary">sign up</a>
+                        <a href="#" class="btn btn-default">Log in</a>
+                    </div>
+                     <ul>
+                         <li><a href="#">About Us</a></li>
+                         <li><a href="#">OUR PARTNERS</a></li>
+                         <li><a href="#">PRIVACY POLICY</a></li>
+                         <li><a href="#">TERMS OF USE</a></li>
+                         <li><a href="#">CONTACT US</a></li>
+                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -351,32 +369,7 @@ from pipeline_mako import render_require_js_path_overrides
                         <h3>Explore by topics</h3>
                     </div>
                     <div class="col-xs-12">
-                        <ul class="topic-card clearfix">
-                            <li>
-                                <a href="">
-                                    <img src="images/Allergy.jpg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="images/Allergy.jpg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="images/Allergy.jpg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="images/Allergy.jpg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="images/Allergy.jpg" alt="">
-                                </a>
-                            </li>
+                        <ul class="topic-card js-topic-carousel owl-carousel clearfix">
                             <li>
                                 <a href="">
                                     <img src="images/Allergy.jpg" alt="">

@@ -8,6 +8,9 @@ jQuery(function($) {
         if ($('.js-partner-carousel').length) {
             partnerSlider();
         }
+        if ($('.js-topic-carousel').length) {
+            topicSlider();
+        }
         if ($('.js-courses-slider').length) {
             if ($(window).width() < 768) {
                 coursesSlider();
@@ -85,6 +88,14 @@ jQuery(function($) {
 
 
 });
+// responsive menu
+$('.navbar-toggle').on('click',function(){
+$('.mob-menu').addClass('active');
+});
+$('.close-mob-menu').on('click',function(e){
+    e.preventDefault();
+    $('.mob-menu').removeClass('active');
+    });
 
 
 //partner slider
@@ -113,6 +124,36 @@ function partnerSlider() {
 
 }
 
+
+
+//partner slider
+function topicSlider() {
+    $('.js-topic-carousel').owlCarousel({
+       loop:true,
+    margin:10,
+    nav:true,
+    stagePadding: 50,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+    })
+
+}
+$('.js-about-tabs li').on('click',function(e){
+    e.preventDefault();
+    var index = $(this).index();
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.content-wrapper .content-item').removeClass('active');
+    $('.content-wrapper .content-item').eq(index).addClass('active');
+    });
 //course slider
 //partner slider
 function coursesSlider() {
