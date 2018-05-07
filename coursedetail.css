@@ -266,23 +266,4 @@ float: left;
        color: gold;
        font-size: 18px;
     }
-
-.courseFaq h2 {
-    text-align: left;
-    font-size: 24px;
-    font-weight: 600;
-}
-.courseFaq .panel-default>.panel-heading {
-      background-color: #f5f5f5;
-    border-radius: 0;
-   border-bottom: 1px solid #ccc;
-}
-
-.courseFaq .panel-group .panel{
-  border-radius: 0;
-   border: 0;
-}
-
-.courseFaq .panel-group .panel+.panel{
-  margin-top: 0;
-}
+  
